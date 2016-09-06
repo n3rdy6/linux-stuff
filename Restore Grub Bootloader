@@ -2,14 +2,17 @@
 
 
 
-It's simple to restore the grub bootloader with 
+It's simple to restore the grub bootloader with Manjaro live image.
 
-Manjaro live image.
 $ yaourt -S mhwd-chroot
+
 $ sudo mhwd-chroot
 
 Choose the Manjaro partition.
+
 $ pacman -S mtools os-prober
+
 $ grub-install /dev/sda
+
 $ update-grub
 
