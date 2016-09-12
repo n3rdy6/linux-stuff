@@ -1,0 +1,48 @@
+Xfce4 Custom
+
+YouTube Video: https://youtu.be/JkSTa9ITISY
+
+sudo pacman -S faenza-icon-theme
+sudo pacman -S numix-themes
+sudo pacman -S xfce4-whiskermenu-plugin
+sudo pacman -S gvfs
+sudo pacman -S unrar zip unzip p7zip
+sudo pacman -S thunar-archive-plugin
+
+AUR Files:
+yaourt gtk-theme-config
+yaourt numix-circle-icon-theme-git
+xfce4-dockbarx-plugin-git
+
+AUR Archive: https://github.com/aur-archive
+engrampa-thunar
+xame
+
+# Install Nvidia Proprietary Arch Linux
+# YouTube Video: https://youtu.be/jZ2bQRJAg_w
+
+sudo pacman -S nvidia nvidia-libgl
+if asked to remove mesa-libgl, answer yes (y)
+
+reboot
+
+# 32-bit libraries
+
+sudo pacman -S lib32-nvidia-utils lib32-nvidia-libgl lib32-mesa-demos libva-vdpau-driver
+
+# Nvidia presistance service
+
+sudo systemctl enable nvidia-persistenced.service
+
+reboot
+
+check with (terminal):
+glxinfo32 | grep OpenGL
+vainfo
+
+# Optional
+
+sudo nvidia-xconfig --cool-bits=4 (reboot)
+yaourt gputest
+sudo pacman -S nvdock
+
